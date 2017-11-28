@@ -1,0 +1,83 @@
+.welcome {
+	color: #000;
+	background: #fff;
+	padding: 100px 0;
+
+	&_center {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+	
+	&_main-box {
+		margin-right: 2.5%;
+		flex: 1 1 0;
+	}
+
+	&_main-title {
+		font-size: 32px;
+		font-family: "NerisSemiBold";
+		margin-bottom: 70px;
+		.orange-bar;
+	}
+
+	&_main-text {
+		font-size: 24px;
+		font-family: "NerisThin";
+		margin-bottom: 50px;
+	}
+
+	&_more {
+		font-family: "NerisSemiBold";
+		color: #000;
+		text-decoration: none;
+		position: relative;
+		.right-arrow;
+
+	}
+	
+	&_box {
+		flex: 1 1 0;
+		margin-right: 2.5%;
+
+		&__last {
+			margin-right: 0;
+		}
+	}
+
+	&_title {
+		font-family: "NerisLight";
+		font-size: 22px;
+		line-height: 22px;
+		position: relative;
+		padding-left: 50px;
+		top: -52px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 30px;
+			height: 30px;
+			left: 0;
+			top: -3px;
+		}
+
+		&__colabarate::before {
+			background: url("../../img/colabarate.png") no-repeat center;
+		}
+
+		&__creative::before {
+			background: url("../../img/heart.png") no-repeat center;
+		}
+
+		&__development::before {
+			background: url("../../img/development.png") no-repeat center;
+		}
+	}
+
+	&_text {
+		position: relative;
+		top: -22px;
+	}
+}

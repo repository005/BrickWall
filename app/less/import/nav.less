@@ -1,0 +1,38 @@
+.nav {
+	& ul {
+		list-style: none;
+	}
+
+	&_item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 40px;
+		font-size: 0;
+	}
+
+	&_link {
+		display: block;
+		text-decoration: none;
+		color: white;
+		font-family: "NerisSemiBold";
+		font-size: 36px;
+		text-transform: lowercase;
+		position: relative;
+
+		&:hover::after {
+			content: "";
+			position: absolute;
+			bottom: -9px;
+			background: @ORANGE;
+			width: 100%;
+			left: 0;
+			height: 4px;
+			z-index: 1;
+			opacity: .65;
+		}
+
+		&__active {
+			.orange-bar;
+		}
+	}
+}

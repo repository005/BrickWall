@@ -1,0 +1,46 @@
+body {
+	background: #ff8c6c;
+	font-family: "NerisThin";
+	color: white;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+ul,p,h1,h2,h3,h4 {
+		margin: 0;
+		padding: 0;
+}
+
+@ORANGE: #e8432e;
+
+.orange-bar {
+	position: relative;
+
+	&::before {
+			content: "";
+			position: absolute;
+			bottom: -9px;
+			left: 0;
+			background: @ORANGE;
+			width: 30px;
+			height: 4px;
+			z-index: 2;
+		}
+}
+
+
+.right-arrow {
+	padding-left: 25px;
+
+	&::before {
+		position: absolute;
+		content: "→";
+		display: block;
+		left: 0;
+		color: @ORANGE;
+		top: 3px;
+	}
+}
