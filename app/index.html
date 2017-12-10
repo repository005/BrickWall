@@ -46,6 +46,7 @@
   	</div>
   </section>
   <section class="carousel">
+    <a href="" class="carousel_prev">previous</a>
   	<div class="container">
   		<h2 class="carousel_title">Latest from the blog</h2>
   		<div class="news">
@@ -57,50 +58,64 @@
   			<div class="news_item">
   				<div class="news_img">bicycleImg</div>
   				<div class="news_item-left">
-  					<div class="news_date">08 feb</div>
+  					<div class="news_date">Feb <br><span>08</span></div>
   					<div class="news_likes">
-  						<a href="" class="news_like">like</a>
-  						<span class="news_quantity">140</span>
+  						<a href="#" class="news_like-btn">
+                <svg class="news_heart">
+                  <path id="HEART" class="cls-1" d="M832.25,1072a6.109,6.109,0,0,0-4.523,1.92h0l-0.724.92-0.725-.86h0a6.13,6.13,0,0,0-4.523-1.98,6.749,6.749,0,0,0-4.775,11.52l8.96,9.04a1.509,1.509,0,0,0,2.13,0l8.959-9.04A6.751,6.751,0,0,0,832.25,1072h0Z" transform="translate(-815 -1072)"/>      
+                </svg>
+              </a><br>
+  						<span class="news_like-quantity">140</span>
   					</div>
   				</div>
   				<div class="news_item-right">
-  					<h3 class="news_title">Lorem ipsum dolor sit amet.</h3>
-  					<a href="" class="news_comments"><span class="	news_comments-quantity">5</span>comments</a>
-  					<p class="news_text">Lorem ipsum dolor sit amet, 	consectetur adipisicing elit. Neque culpa, labore 	dolorem, quia quo </p>
+  					<h3 class="news_title">Lorem ipsum dolor sit ametconsectetur adipisicing elit. Ad, minus.</h3>
+  					<a href="" class="news_comments"><span class="	news_comments-quantity">5</span> comments</a>
+  					<p class="news_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque culpa, labore dolorem, quia quo </p>
   					<a href="" class="news_more">Read more</a>
   				</div>
   			</div>
-  			<div class="news_blockquate">
-  				<p class="news_quate">Lorem ipsum dolor sit amet, 	consectetur adipisicing elit. Doloribus esse dolore minima 	non numquam  voluptas.</p>
+  			<div class="news_blockquote">
+  				<p class="news_quote">Lorem ipsum dolor sit amet, 	consectetur adipisicing elit. Doloribus esse dolore minima 	non numquam  voluptas.</p>
   				<p class="news_author">Davinski Mortge</p>
   			</div>
   		</div>
   	</div>
+    <a href="" class="carousel_next">next</a>
   </section>
-  <section class="quate">
-  	<p class="quate_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatibus quos a quidem impedit, <veritatis>  </veritatis>modi animi necessitatibus sit doloribus tenetur, alias placeat, odio dolore?</p>
-  	<p class="quate_author">Petr Smorodin</p>
-  	<div class="quate_toggler">
-  		<i class="quate_button">1</i>
-  		<i class="quate_button">2</i>
-  		<i class="quate_button">3</i>
-  	</div>
+  <section class="quote">
+    <div class="container">
+  	 <p class="quote_text">Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Autem voluptatibus quos a quidem impedit,  modi animi necessitatibus sit doloribus tenetur, alias   placeat, odio dolore?</p>
+  	 <p class="quote_author">- Petr Smorodin</p>
+  	 <div class="quote_toggler">
+  	 	<i class="quote_button quote_button__active">1</i>
+  	 	<i class="quote_button">2</i>
+  	 	<i class="quote_button">3</i>
+  	 </div>
+    </div>
   </section>
   <section class="form">
   	<div class="container">
   		<h2 class="form_title">Get it touch</h2>
   		<div class="form_box">
-  			<div class="form_left">
-  				<p class="form">Lorem ipsum dolor sit amet, consectetur 		adipisicing elit. Deserunt, quis.</p>
+  			<div class="form_info">
+  				<p class="form_text">Lorem ipsum dolor sit amet, consectetur 		adipisicing elit. Deserunt, quis.</p>
   				<p class="form_address">Lorem ipsum dolor sit amet, 		consectetur adipisicing elit. Quibusdam, quasi.</p>
   			</div>
   			<form action="" method="get" class="form_send">
-  				<h3 class="send_title">Say hello!</h3>
+  				<h3 class="form_send-title">Say hello!</h3>
   				<input type="text" class="form_name" placeholder="Name">
   				<input type="text" class="form_email" placeholder="Email">
-  				<input type="text" class="form_essage" placeholder="Message"	>
+  				<input type="text" class="form_message" placeholder="Message"	>
   				<input type="submit" class="form_button" value="Send message"	>
   			</form>
+        <div class="form-social">
+          <a href="#" class="form_social-icon">Behance</a>
+          <a href="#" class="form_social-icon">Twitter</a>
+          <a href="#" class="form_social-icon">Dribble</a>
+          <a href="#" class="form_social-icon">Forrst</a>
+          <a href="#" class="form_social-icon">Google Plus</a>
+        </div>
   		</div>
   	</div>
   </section>
@@ -108,6 +123,7 @@
   <footer class="footer">
   	<div class="container">
   		<div class="footer_clock">00:00:00</div>
+      <button class="footer_up">Вверх</button>
   		<div class="footer_design">Основа дизайна 
   		<a href="http://kreativeshowcase.com/2014/02/	freebie-my-kingdom-one-page-psd-template-3/"   target="_blank">отсюда</a>
   		</div>
