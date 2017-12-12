@@ -17,7 +17,7 @@ gulp.task("less", function() {
 	 	.pipe(plumber())
 	 .pipe(less())
 	 .pipe(autoprefixer(["last 15 versions"], {cascade: true}))
-	 .pipe(gulp.dest("app/css"))
+	 .pipe(gulp.dest("app/style/css"))
 	 .pipe(browserSync.reload({stream: true}));
 });
 
@@ -33,10 +33,10 @@ gulp.task("scripts", function() {
 });
 
 gulp.task("css-libs", ["less"], function() {
-	return gulp.src("app/css/libs.css")
+	return gulp.src("app/style/css/libs.css")
 	.pipe(cssnano())
 	.pipe(rename({suffix: ".min"}))
-	.pipe(gulp.dest("app/css"));
+	.pipe(gulp.dest("app/style/css"));
 });
 
 gulp.task("clean", function() {
@@ -76,10 +76,10 @@ gulp.task("browser-sync", function() {
 gulp.task("build", ["clean", "img", "less", "scripts"], function() {
 
 	var buildCss = gulp.src([
-		"app/css/main.css",
-		"app/css/libs.min.css",
+		"app/style/css/main.css",
+		"app/style/css/libs.min.css",
 	])
-	.pipe(gulp.dest("dist/css"));
+	.pipe(gulp.dest("dist/style/css"));
 
 	var buildFonts = gulp.src("app/fonts/**/*")
 	.pipe(gulp.dest("dist/fonts"));

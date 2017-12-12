@@ -1,0 +1,45 @@
+.quote {
+	background: url("../../img/quote.jpg") no-repeat center;
+	background-size: cover;
+	padding: 135px 30px 90px;
+	text-align: center;
+	
+	&_text {
+		margin-bottom: 35px;
+		font-size: 22px;
+		line-height: 36px;
+	}
+
+	&_author {
+		font-size: 13px;
+		margin-bottom: 55px;
+	}
+	
+	&_toggler {
+		font-size: 0;
+		text-align: center;
+	}
+
+	&_button {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		opacity: .5;
+		background: #fff;
+		margin-right: 10px;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&__active {
+			opacity: 1;
+		}
+	}
+}

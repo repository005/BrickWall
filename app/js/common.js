@@ -30,3 +30,18 @@ like.addEventListener("click", function() {
 		quantity.innerHTML = quantityNumber;
 	}
 });
+
+var message = document.querySelector(".form_message");
+
+message.addEventListener("input", function() {
+	if (message.value.length > 150) {
+		message.value = message.value.slice(0,150);
+		alert("Сообщение слишком длинное! Вам надо уложиться в 150 символов.");	
+	}
+});
+
+sendButton.addEventListener("click", function() {
+	event.preventDefault();
+	alert(message.value.length);
+})
+
