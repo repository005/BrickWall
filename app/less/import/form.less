@@ -33,7 +33,7 @@
 		font-size: 0;
 	}
 	
-	.form_send input[type="text"], &_message {
+	&_send input[type="text"], &_message {
 		box-sizing: border-box;
 		font-size: 16px;
 		color: #717171;
@@ -74,7 +74,6 @@
 		font-size: 16px;
 		text-align: right;
 
-
 		& svg {
 			display: inline-block;;
 			fill: #e8432e;
@@ -84,11 +83,7 @@
 
 		&:hover {
 			cursor: pointer;
-
-			& svg {
-				fill: darken(#e8432e, 10%);
-			}
-
+			
 			& input {
 				color: darken(#e8432e, 10%);
 			}
@@ -99,6 +94,7 @@
 			cursor: pointer;
 			font-family: "NerisLight";
 			border: none;
+			background: none;
 
 			&:focus {
 				outline: none;

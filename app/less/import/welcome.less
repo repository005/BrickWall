@@ -1,17 +1,18 @@
 .welcome {
 	color: #000;
 	background: #fff;
-	padding: 100px 0;
+	padding: 100px 0 100px;
 
 	&_center {
 		display: flex;
-		align-items: baseline;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	
 	&_main-box {
 		margin-right: 2.5%;
-		flex: 1 1 0;
+		flex: 1 0 220px;
+		margin-bottom: 75px;
 	}
 
 	&_main-title {
@@ -31,17 +32,24 @@
 		font-family: "NerisSemiBold";
 		color: #000;
 		text-decoration: none;
-		position: relative;
+		position: absolute;
+		bottom: 50px;
+		left: 5.5%;
 		.right-arrow;
 
+		&:hover {
+			color: @ORANGE;
+		}
 	}
 	
 	&_box {
-		flex: 1 1 0;
+		flex: 1 0 220px;
 		margin-right: 2.5%;
+		margin-bottom: 75px;
 
 		&__last {
 			margin-right: 0;
+			margin-bottom: 75px;
 		}
 	}
 

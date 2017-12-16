@@ -40,8 +40,15 @@ message.addEventListener("input", function() {
 	}
 });
 
-sendButton.addEventListener("click", function() {
-	event.preventDefault();
-	alert(message.value.length);
-})
+//Вспомогательный код для вьюпорта
+
+var view = document.querySelector("#viewport span");
+
+	setInterval(function() {
+		view.innerHTML = document.documentElement.clientWidth + " px";
+	}, 100);
+
+
+
+
 
