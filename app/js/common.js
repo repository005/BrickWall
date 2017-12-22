@@ -43,7 +43,7 @@ $(window).bind("scroll", function () {
 	showUp();
 });
 
-var t;
+var t; //timer for button opacity
 
 function showUp() {
 	if (pageYOffset > 700) {
@@ -61,7 +61,7 @@ function showUp() {
 
 $(upButton).bind("mouseover", function() {
 	upButton.style.top = "0";
-	clearTimeout(t);
+	if (t) clearTimeout(t);
 
 	$(upButton).bind("mouseout", function() {
 		t = setTimeout(function() {
