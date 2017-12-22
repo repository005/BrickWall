@@ -1,18 +1,4 @@
-var upButton = document.querySelector(".footer_up");
-function up() {
- 	var timer;
-  var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-  if(top > 0) {
-   window.scrollBy(0,((top+100)/-30));
-   timer = setTimeout('up()',3);
-  } else clearTimeout(t);
-  return false;
- }
-
-upButton.addEventListener("click", function() {
-	up();
-});
-
+//Лайк
 var like = document.querySelector(".news_like-btn");
 var heart = document.querySelector(".news_heart");
 var quantity = document.querySelector(".news_like-quantity");
@@ -41,12 +27,65 @@ message.addEventListener("input", function() {
 });
 
 //Вспомогательный код для вьюпорта
-
 var view = document.querySelector("#viewport span");
 
 	setInterval(function() {
 		view.innerHTML = document.documentElement.clientWidth + " px";
 	}, 100);
+
+//кнопка вверх
+var upButton = document.createElement("div");  
+upButton.innerHTML = "Вверх";
+upButton.classList = "upButton"
+$("body").append(upButton);
+
+$(window).bind("scroll", function () {
+	showUp();
+});
+
+var t; //timer for button opacity
+
+function showUp() {
+	if (pageYOffset > 700) {
+	upButton.style.opacity = "1";
+	upButton.style.top = "0";
+
+	if (t) clearTimeout(t);
+	t = setTimeout(function() {
+		upButton.style.top = "-37px";
+	}, 3000);
+
+} else {
+	upButton.style.opacity = "0";
+}
+
+$(upButton).bind("mouseover", function() {
+	upButton.style.top = "0";
+	if (t) clearTimeout(t);
+
+	$(upButton).bind("mouseout", function() {
+		t = setTimeout(function() {
+			upButton.style.top = '-37px';
+		}, 3000);
+	});
+});
+}
+
+function up() {
+ 	var timer;
+  var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+  if(top > 0) {
+   window.scrollBy(0,((top+100)/-30));
+   timer = setTimeout('up()',3);
+  } else {
+  	clearTimeout(timer);
+  };
+  return false;
+ }
+
+upButton.addEventListener("click", function() {
+	up();
+});
 
 
 
