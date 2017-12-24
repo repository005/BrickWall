@@ -513,16 +513,13 @@ h4 {
   color: #fff;
   font-size: 22px;
   font-family: "NerisSemiBold";
-  padding: 10px 0 15px;
+  padding: 5px 0 20px;
   -webkit-border-radius: 0 0 25px 25px;
           border-radius: 0 0 25px 25px;
   opacity: 0;
-  -webkit-transition: 1s opacity ease-in-out;
-  -o-transition: 1s opacity ease-in-out;
-  transition: 1s opacity ease-in-out;
-  -webkit-transition: 0.1s top ease-in-out;
-  -o-transition: 0.1s top ease-in-out;
-  transition: 0.1s top ease-in-out;
+  -webkit-transition: 0.3s top ease-in-out;
+  -o-transition: 0.3s top ease-in-out;
+  transition: 0.3s top ease-in-out;
 }
 .upButton:hover {
   background: rgba(0, 0, 0, 0.7);
