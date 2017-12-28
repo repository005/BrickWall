@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 //Active page
 var nav = $(".nav")[0];
 var navLinks = $(".nav_link");
