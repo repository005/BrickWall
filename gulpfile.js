@@ -81,6 +81,7 @@ gulp.task("build", ["clean", "img", "less", "scripts"], function() {
 	var buildCss = gulp.src([
 		"app/style/css/main.css",
 		"app/style/css/libs.min.css",
+		"app/style/css/owl.carousel.css"
 	])
 	.pipe(gulp.dest("dist/style/css"));
 
