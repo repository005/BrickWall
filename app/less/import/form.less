@@ -2,18 +2,34 @@
 	background: #fff;
 	color: #000;
 	padding: 115px 0 70px;
+
+	@media screen and @tablet {
+		padding: 70px 0 30px;
+		text-align: center;
+	}
 	
 	&_title {
 		font-size: 32px;
 		font-family: "NerisSemiBold";
 		margin-bottom: 70px;
 		.orange-bar;
+
+		@media screen and @tablet {
+			margin-bottom: 30px;
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 	&_box {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+
+		@media screen and @tablet {
+			display: block;
+		}
 	}
 
 	&_right-side {
@@ -21,6 +37,10 @@
 		justify-content: space-between;
 		flex-wrap: nowrap;
 		flex: 4 1 0;
+
+		@media screen and @tablet {
+			display: block;
+		}
 	}
 
 	&_info {
@@ -28,11 +48,20 @@
 		min-width: 270px;
 		margin-right: 15px;
 		margin-bottom: 50px;
+
+		@media screen and @tablet {
+			margin-bottom: 40px;
+		}
 	}
 
 	&_text {
 		font-size: 24px;
 		margin-bottom: 35px;
+
+		@media screen and @tablet {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
 	}
 
 	&_address {
@@ -45,6 +74,11 @@
 		min-width: 600px;
 		margin-right: 15px;
 		font-size: 0;
+
+		@media screen and @tablet {
+			min-width: 0;
+			width: 100%;
+		}
 	}
 	
 	&_send input[type="text"], &_message {
@@ -70,12 +104,23 @@
 		min-width: 270px;
 		margin-bottom: 40px;
 		margin-right: 4%;
+
+		@media screen and @tablet {
+			min-width: 0;
+			width: 90%;
+			margin-right: 0;
+		}
 	}
 
 	&_email {
 		width: 47%;
 		min-width: 270px;
 		margin-bottom: 40px;
+
+		@media screen and @tablet {
+			min-width: 0;
+			width: 90%;
+		}
 	}
 
 	&_message {
@@ -83,6 +128,15 @@
 		margin-bottom: 40px;
 		height: 39px;
 		resize: none;
+
+		@media screen and @tablet {
+			min-width: 0;
+			width: 90%;
+		}
+
+		@media screen and @mobile {
+			height: 100px;
+		}
 	}
 	
 	&_label-button {
@@ -117,16 +171,43 @@
 				color: darken(#e8432e, 10%);
 			}
 		}
-	}
 
-	&_send-title {
-		font-size: 24px;
-		font-family: "NerisSemiBold";
-		margin-bottom: 35px;
+		@media screen and @tablet {
+			font-size: 20px;
+			text-align: center;
+			background: @ORANGE;
+			padding: 12px 0;
+			border: 2px solid darken(@ORANGE, 15%);
+			border-radius: 10px;
+			margin: auto;
+			width: 90%;
+
+			& svg {
+				display: none
+			}
+			& input {
+				color: #000;
+				text-transform: uppercase;
+				font-family: "NerisSemiBold";
+				cursor: pointer;
+				border: none;
+				background: none;
+				
+				&:hover {
+					color: #000;
+				}
+			}
+		}
 	}
 
 	&_social {
-		width: 70px;
+
+		@media screen and @tablet {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 50px;
+		}
 	}
 
 	&_social-icon {

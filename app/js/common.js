@@ -4,17 +4,21 @@ $(document).ready(function() {
 var nav = $(".nav")[0];
 var navLinks = $(".nav_link");
 
-$(nav).bind("click", function(e) {
+$(nav).on ("click", ".nav_link", function(e) {
 	var target = e.target;
-	if (target.nodeName != "A") return;
 	$(navLinks).each(function(i) {
 		navLinks[i].classList.remove("nav_link__active");
 	});
-	target.classList.add("nav_link__active");
+	$(target).addClass("nav_link__active");
 });
 
-//Like-button
+//Welcome-show
+$(".welcome_title").on("click", function() {
+	$(this).closest(".welcome_box").find(".welcome_text").slideDown();
+});
 
+
+//Like-button
 var likeObj = {
 	"bicycle" : false,
 	"cafe" : false,

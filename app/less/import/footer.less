@@ -3,6 +3,10 @@
 	padding: 50px 0;
 	color: #fff;
 
+	@media screen and @tablet {
+		padding: 20px 0;
+	}
+
 	& .container {
 		display: flex;
 		justify-content: space-around;
@@ -22,6 +26,10 @@
 	&_design {
 		a {
 			color: yellow;
+
+			&:hover {
+				color: gold;
+			}
 		}
 	}
 }
