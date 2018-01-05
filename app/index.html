@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="style/css/owl.carousel.css">
 </head>
 <body>
-  <div id="viewport">
-    <span>000</span>
-  </div>
   <header class="header" id="header"> 
   	<div class="container">
       <nav class="nav">
@@ -67,7 +64,7 @@
     <div class="carousel_slider">
       <i class="carousel_prev"></i>
       <div class="carousel_box owl-carousel">
-        <div class="carousel_item"> 
+        <div class="carousel_item" data-type="bicycle"> 
           <div class="carousel_left">
             <h3 class="carousel_left-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, expedita.</h3>
             <p class="carousel_left-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quis? Expedita omnis veritatis>reiciendis veniam.</p>
@@ -76,12 +73,12 @@
           <div class="news">
   			    <div class="news_img news_img__bicycle">bicycleImg</div>
   			    <div class="news_item-left">
-  		        <div class="news_date">Feb <br>
+  		        <div class="news_date">Feb<br>
                <span>08</span>
               </div>
   		        <div class="news_likes">
   			 		    <a href="#" class="news_like-btn">
-                  <svg class="news_heart">
+                  <svg class="news_heart ">
                     <path id="HEART" class="cls-1" d="M832.25,1072a6.109,6.109,0,0,0-4.523,1.92h0l-0.724.92-0.725-.86h0a6.13,6.13,0,0,0-4.523-1.98,6.749,6.749,0,0,0-4.775,11.52l8.96,9.04a1.509,1.509,0,0,0,2.13,0l8.959-9.04A6.751,6.751,0,0,0,832.25,1072h0Z" transform="translate(-815 -1072)"/>
                   </svg>
                 </a><br>
@@ -100,7 +97,7 @@
             <p class="carousel_author">Davinski Mortge</p>
           </div>
         </div>
-        <div class="carousel_item"> 
+        <div class="carousel_item" data-type="cafe"> 
           <div class="carousel_left">
             <h3 class="carousel_left-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, expedita.</h3>
             <p class="carousel_left-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quis? Expedita omnis veritatis>reiciendis veniam.</p>
@@ -109,8 +106,8 @@
           <div class="news">
             <div class="news_img news_img__cafe">bicycleImg</div>
             <div class="news_item-left">
-              <div class="news_date">Feb <br>
-               <span>08</span>
+              <div class="news_date">Mar<br>
+               <span>12</span>
               </div>
               <div class="news_likes">
                 <a href="#" class="news_like-btn">
@@ -118,7 +115,7 @@
                     <path id="HEART" class="cls-1" d="M832.25,1072a6.109,6.109,0,0,0-4.523,1.92h0l-0.724.92-0.725-.86h0a6.13,6.13,0,0,0-4.523-1.98,6.749,6.749,0,0,0-4.775,11.52l8.96,9.04a1.509,1.509,0,0,0,2.13,0l8.959-9.04A6.751,6.751,0,0,0,832.25,1072h0Z" transform="translate(-815 -1072)"/>
                   </svg>
                 </a><br>
-                <span class="news_like-quantity">140</span>
+                <span class="news_like-quantity">78</span>
               </div>
             </div>
             <div class="news_item-right">
@@ -133,7 +130,7 @@
             <p class="carousel_author">Davinski Mortge</p>
           </div>
         </div>
-        <div class="carousel_item"> 
+        <div class="carousel_item" data-type="coffee"> 
           <div class="carousel_left">
             <h3 class="carousel_left-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, expedita.</h3>
             <p class="carousel_left-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quis? Expedita omnis veritatis>reiciendis veniam.</p>
@@ -142,8 +139,8 @@
           <div class="news">
             <div class="news_img news_img__coffee">bicycleImg</div>
             <div class="news_item-left">
-              <div class="news_date">Feb <br>
-               <span>08</span>
+              <div class="news_date">Sep<br>
+               <span>30</span>
               </div>
               <div class="news_likes">
                 <a href="#" class="news_like-btn">
@@ -151,7 +148,7 @@
                     <path id="HEART" class="cls-1" d="M832.25,1072a6.109,6.109,0,0,0-4.523,1.92h0l-0.724.92-0.725-.86h0a6.13,6.13,0,0,0-4.523-1.98,6.749,6.749,0,0,0-4.775,11.52l8.96,9.04a1.509,1.509,0,0,0,2.13,0l8.959-9.04A6.751,6.751,0,0,0,832.25,1072h0Z" transform="translate(-815 -1072)"/>
                   </svg>
                 </a><br>
-                <span class="news_like-quantity">140</span>
+                <span class="news_like-quantity">5</span>
               </div>
             </div>
             <div class="news_item-right">
@@ -195,9 +192,9 @@
         <div class="form_right-side">
   			  <form action="" method="get" class="form_send">
   				  <h3 class="form_send-title">Say hello!</h3>
-  				  <input type="text" class="form_name" placeholder="Name">
-  			   	<input type="text" class="form_email" placeholder="Email">
-  			   	<textarea class="form_message" placeholder="Message"></textarea> 
+  				  <input type="text" class="form_name" placeholder="Name" required>
+  			   	<input type="text" class="form_email" placeholder="Email" required>
+  			   	<textarea class="form_message" placeholder="Message" required></textarea> 
             <label class="form_label-button">
             <svg 
               </defs>
@@ -228,6 +225,6 @@
   <script src="js/parallax.js"></script>
   <script src="js/owl-carousel.js"></script>
   <script src="js/common.js"></script>
-
+  <script src="js/viewport-showing.js"></script>
 </body>
 </html>

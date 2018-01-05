@@ -13,28 +13,49 @@ $(nav).bind("click", function(e) {
 	target.classList.add("nav_link__active");
 });
 
-
-
-
 //Like-button
-var like = document.querySelector(".news_like-btn");
-var heart = document.querySelector(".news_heart");
-var quantity = document.querySelector(".news_like-quantity");
-var quantityNumber = parseInt(quantity.innerHTML);
 
-like.addEventListener("click", function() {
-	event.preventDefault();
-	heart.classList.toggle("news_heart__active");
-	quantity.classList.toggle("news_like-quantity__active");
-	if (quantityNumber == 140) {
-		quantityNumber++;
-		quantity.innerHTML = quantityNumber;
+var likeObj = {
+	"bicycle" : false,
+	"cafe" : false,
+	"coffee" : false
+}
+
+var likeActive = false; 
+
+$(".news_like-btn").on("click", function(e) {
+	e.preventDefault();
+	var item = $(this).closest(".carousel_item");
+	var itemType = item.data("type");
+	var heart = $(this).find(".news_heart");
+	var quantity = item.find(".news_like-quantity");
+	var quantityNumber = parseInt(quantity.html());
+
+	heart.toggleClass("news_heart__active");
+	quantity.toggleClass("news_like-quantity__active");
+
+	if (!likeObj[itemType]) {
+		quantity.html(quantityNumber + 1);
+		likeUp(item);
+		likeObj[itemType] = !likeObj[itemType];
 	} else {
-		quantityNumber--;
-		quantity.innerHTML = quantityNumber;
+		quantity.html(quantityNumber - 1);
+		likeObj[itemType] = !likeObj[itemType];
 	}
-});
+})
 
+function likeUp(item) {
+	var heartUp = $(item).find(".news_heart").clone();
+	$(heartUp).addClass('likeUp');
+	$(heartUp).css("position", "absolute");
+	$(item).find(".news_like-btn").append(heartUp);
+
+	setTimeout(function() {
+		$(".likeUp").remove();
+	}, 400);
+}
+
+//Message limit
 var message = document.querySelector(".form_message");
 
 message.addEventListener("input", function() {
@@ -44,14 +65,7 @@ message.addEventListener("input", function() {
 	}
 });
 
-//Вспомогательный код для вьюпорта
-var view = document.querySelector("#viewport span");
-
-	setInterval(function() {
-		view.innerHTML = document.documentElement.clientWidth + " px";
-	}, 100);
-
-//кнопка вверх
+//Button to the top of the page
 var upButton = document.createElement("div");  
 upButton.innerHTML = "Вверх";
 upButton.classList = "upButton"
@@ -92,8 +106,8 @@ function up() {
  	var timer;
   var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
   if(top > 0) {
-   window.scrollBy(0,((top+100)/-30));
-   timer = setTimeout(up, 3);
+   window.scrollBy(0,((top+100)/-10));
+   timer = setTimeout(up, 4);
   } else {
   	clearTimeout(timer);
   };

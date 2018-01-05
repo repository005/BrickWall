@@ -5,6 +5,18 @@
 	user-select: none;
 	border-bottom: 5px @ORANGE solid;
 
+	@media screen and @tablet {
+		padding: 30px 0 100px 0;
+		background: url("../../img/brick_wall_tablet.jpg") no-repeat center;
+		background-size: cover;
+	}
+
+	@media screen and @mobile {
+		padding: 10px 0 50px 0;
+		background: url("../../img/brick_wall_mobile.jpg") no-repeat center;
+		background-size: cover;
+	}
+
 	&_title {
 		font-family: "NerisSemiBold", sans-serif;
 		font-size: 72px;

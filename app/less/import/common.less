@@ -1,13 +1,3 @@
-#viewport {
-	background: red;
-	padding: 5px 20px;
-	position: fixed;
-	right: 20px;
-	top: 50px;
-	text-align: center;
-	opacity: .5;
-}
-
 body {
 	background: #ff8c6c;
 	font-family: "NerisThin";
@@ -26,9 +16,6 @@ ul,p,h1,h2,h3,h4 {
 		padding: 0;
 }
 
-@ORANGE: #e8432e;
-@tablet: ~"(max-width: 768px)";
-@mobile: ~"(max-width: 420px)";
 .orange-bar {
 	position: relative;
 
@@ -77,3 +64,22 @@ ul,p,h1,h2,h3,h4 {
 		cursor: pointer;
 	}
 }
+
+//animation for like-button
+.likeUp {
+	animation: like-click .5s;
+	left: calc(~"50% - 12.5px");
+	top: -23px;
+	position: absolute;
+	opacity: 1;
+	z-index: 0;
+}
+ 
+@keyframes like-click {
+	0% { opacity: 1; fill: #000;}
+	100% {top: -53px; opacity: 0; fill: grey;}
+}
+
+@ORANGE: #e8432e;
+@tablet: ~"(max-width: 768px)";
+@mobile: ~"(max-width: 420px)";

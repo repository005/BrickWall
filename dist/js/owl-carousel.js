@@ -3,7 +3,8 @@ $(document).ready(function() {
 		items: 1,
 		loop: true,
 		dots: false,
-		responsive: {}
+		responsive: {},
+		mouseDrag: false
   });
 
 // Custom Navigation Events
