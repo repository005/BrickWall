@@ -1,0 +1,58 @@
+.toggler {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 5;
+	right: 15px;
+	top: 15px;
+	cursor: pointer;
+
+	&_hamburger {
+		display: none;
+
+		i:first-child {
+			margin-top: 5px;
+		}
+
+		i {
+			display: block;
+			margin-bottom: 7px;
+			width: 40px;
+			height: 5px;
+			background: #fff;
+			border-radius: 5px;
+		}
+
+		&__open {
+			display: block;
+		}
+	}
+
+	&_cross {
+			display: none;
+			position: absolute;
+			top: 17px;
+
+		i {
+			display: block;
+			width: 40px;
+			height: 5px;
+			background: #fff;
+			border-radius: 5px;
+		}
+
+		i:nth-child(1) {
+			transform: rotate(45deg);
+			position: absolute;
+		}
+
+		i:nth-child(2) {
+			transform: rotate(135deg);
+			position: absolute;
+		}
+
+		&__open {
+			display: block;
+		}
+	}
+}

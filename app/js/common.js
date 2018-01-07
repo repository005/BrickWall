@@ -14,9 +14,18 @@ $(nav).on ("click", ".nav_link", function(e) {
 
 //Welcome-show
 $(".welcome_title").on("click", function() {
-	$(this).closest(".welcome_box").find(".welcome_text").slideDown();
+		$(this).closest(".welcome_box").find(".welcome_text").slideDown();
 });
 
+//mobile-navigation 
+var navStatus = false;
+
+$(".toggler").on("click", function() {
+	$(".nav_list").slideToggle(200);
+	navStatus = !navStatus;
+	$(".toggler_hamburger").toggleClass("toggler_hamburger__open");
+	$(".toggler_cross").toggleClass("toggler_cross__open");
+});
 
 //Like-button
 var likeObj = {

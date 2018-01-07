@@ -1,5 +1,5 @@
 .nav {
-	& ul {
+	&_list {
 		list-style: none;
 		display: flex;
 		justify-content: left;
@@ -9,6 +9,32 @@
 			justify-content: space-around;
 			flex-wrap: nowrap;
 		}
+
+		@media screen and @mobile {
+			display: none;
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+		}
+	}
+
+	&_mobile-nav {
+		display: none;
+		position: relative;
+
+		@media screen and @mobile {
+			display: block;
+			background: rgba(220,70,50, .7);
+		}
+	}
+
+	&_mobile-title {
+		font-size: 24px;
+		text-decoration: none;
+		color: #fff;
+		display: inline-block;
+		padding: 20px 0;
+		text-transform: uppercase;
 	}
 
 	&_item {
@@ -17,6 +43,10 @@
 
 		@media screen and @tablet {
 			margin-right: 0px
+		}
+
+		@media screen and @mobile {
+			margin: 0;
 		}
 	}
 
@@ -39,14 +69,36 @@
 			height: 4px;
 			z-index: 1;
 			opacity: .65;
+
+			@media screen and @mobile {
+				display: none;
+			}
 		}
 
 		&__active {
 			.orange-bar;
+
+			@media screen and @mobile {
+				&::before {
+					display: none;
+				}
+			}
 		}
 
 		@media screen and @tablet {
 			font-size: 24px;
+		}
+
+		@media screen and @mobile {
+			margin: 0;
+			padding: 12px 0;
+			color: #fff;
+			background: rgba(0,0,0, .7);
+			border-bottom: 2px solid #000;
+
+			&__active {
+				color: @ORANGE;
+			}
 		}
 	}
 }

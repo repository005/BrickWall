@@ -11,7 +11,21 @@
   <header class="header" id="header"> 
   	<div class="container">
       <nav class="nav">
-        <ul>
+        <div class="nav_mobile-nav">
+          <a href="#" class="nav_mobile-title">Brick Wall</a>
+          <div class="toggler">
+            <div class="toggler_hamburger toggler_hamburger__open">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="toggler_cross">
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <ul class="nav_list">
           <li class="nav_item">
   		      <a class="nav_link nav_link__active" href="#">Главная</a>
   		    </li>
@@ -196,13 +210,14 @@
   			   	<input type="text" class="form_email" placeholder="Email" required>
   			   	<textarea class="form_message" placeholder="Message" required></textarea> 
             <label class="form_label-button">
-            <svg 
+            <svg class="form_letter"
               </defs>
               <path d="M1166.91,4446.94l4.87-4.72a0.756,0.756,0,0,1,.22.53v9.5a0.754,0.754,0,0,1-.2.51Zm-10.66-4.75a0.739,0.739,0,0,1,.5-0.19h14.5a0.739,0.739,0,0,1,.5.19l-7.75,6.06Zm-0.05,10.57a0.754,0.754,0,0,1-.2-0.51v-9.5a0.756,0.756,0,0,1,.22-0.53l4.87,4.72Zm7.8-3.01,2.03-1.97,5.73,5.01a0.718,0.718,0,0,1-.51.21h-14.5a0.718,0.718,0,0,1-.51-0.21l5.73-5.01Z" transform="translate(-1156 -4442)"/>
             </svg>
   				  <input type="submit" class="form_button" value="Send message"></label>
+
   			  </form>
-          <div class="form-social">
+          <div class="form_social">
             <a href="#" class="form_social-icon form_social-icon__be">Behance</a>
             <a href="#" class="form_social-icon form_social-icon__tw">Twitter</a>
             <a href="#" class="form_social-icon form_social-icon__dr">Dribble</a>

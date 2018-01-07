@@ -4,17 +4,30 @@ $(document).ready(function() {
 var nav = $(".nav")[0];
 var navLinks = $(".nav_link");
 
-$(nav).bind("click", function(e) {
+$(nav).on ("click", ".nav_link", function(e) {
 	var target = e.target;
-	if (target.nodeName != "A") return;
 	$(navLinks).each(function(i) {
 		navLinks[i].classList.remove("nav_link__active");
 	});
-	target.classList.add("nav_link__active");
+	$(target).addClass("nav_link__active");
+});
+
+//Welcome-show
+$(".welcome_title").on("click", function() {
+		$(this).closest(".welcome_box").find(".welcome_text").slideDown();
+});
+
+//mobile-navigation 
+var navStatus = false;
+
+$(".toggler").on("click", function() {
+	$(".nav_list").slideToggle(200);
+	navStatus = !navStatus;
+	$(".toggler_hamburger").toggleClass("toggler_hamburger__open");
+	$(".toggler_cross").toggleClass("toggler_cross__open");
 });
 
 //Like-button
-
 var likeObj = {
 	"bicycle" : false,
 	"cafe" : false,
