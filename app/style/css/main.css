@@ -961,9 +961,15 @@ h4 {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  position: relative;
 }
 .carousel_box {
   width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .carousel_box {
+    width: 100%;
+  }
 }
 .carousel_item {
   display: -webkit-box;
@@ -994,6 +1000,18 @@ h4 {
   opacity: .5;
   font-size: 0;
   cursor: pointer;
+}
+.carousel_prev:active,
+.carousel_next:active {
+  background: none;
+}
+@media screen and (max-width: 768px) {
+  .carousel_prev,
+  .carousel_next {
+    position: absolute;
+    z-index: 10;
+    background: none;
+  }
 }
 .carousel_prev::before,
 .carousel_next::before {
@@ -1152,12 +1170,23 @@ h4 {
   margin-left: 15px;
   margin-right: 15px;
 }
+@media screen and (max-width: 768px) {
+  .news {
+    margin: 0;
+    max-width: 100%;
+  }
+}
 .news_img {
   width: 570px;
   height: 295px;
   border-bottom: 5px #c1c1c1 solid;
   font-size: 0;
   margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .news_img {
+    width: 100%;
+  }
 }
 .news_img__bicycle {
   background: url("../../img/bicycle.jpg") no-repeat bottom;

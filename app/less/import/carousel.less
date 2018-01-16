@@ -7,10 +7,15 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: nowrap;
+		position: relative;
 	}
 
 	&_box {
 		width: 80%;
+
+		@media screen and @tablet {
+			width: 100%;
+		}
 	}
 
 	&_item {
@@ -31,6 +36,16 @@
 		opacity: .5;
 		font-size: 0;
 		cursor: pointer;
+
+		&:active {
+			background: none;
+		}
+
+		@media screen and @tablet {
+			position: absolute;
+			z-index: 10;
+			background: none;
+		}
 
 
 		&::before {
