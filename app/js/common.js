@@ -4,7 +4,7 @@ $(document).ready(function() {
 var nav = $(".nav")[0];
 var navLinks = $(".nav_link");
 
-$(nav).on ("click", ".nav_link", function(e) {
+$(nav).on("click", ".nav_link", function(e) {
 	var target = e.target;
 	$(navLinks).each(function(i) {
 		navLinks[i].classList.remove("nav_link__active");
@@ -14,7 +14,7 @@ $(nav).on ("click", ".nav_link", function(e) {
 
 //Welcome-show
 $(".welcome_title").on("click", function() {
-		$(this).closest(".welcome_box").find(".welcome_text").slideDown();
+		$(this).closest(".welcome_box").find(".welcome_text").slideDown(200);
 });
 
 //mobile-navigation 
@@ -69,11 +69,11 @@ function likeUp(item) {
 }
 
 //Message limit
-var message = document.querySelector(".form_message");
+var message = $(".form_message");
 
-message.addEventListener("input", function() {
-	if (message.value.length > 150) {
-		message.value = message.value.slice(0,150);
+message.on("input", function() {
+	if (message.val().length > 150) {
+		message.val(message.val().slice(0,150));
 		alert("Сообщение слишком длинное! Вам надо уложиться в 150 символов.");	
 	}
 });
@@ -127,5 +127,5 @@ function up() {
   return false;
  }
 
-$(upButton).bind("click", up);
+$(upButton).on("click", up);
 });
