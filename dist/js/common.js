@@ -78,6 +78,34 @@ message.on("input", function() {
 	}
 });
 
+//Quote active button
+var quote = $(".quote")[0];
+var quoteButtons = $(".quote_button");
+var firstToggler = $("#first_toggler"),
+		secondToggler = $("#second_toggler"),
+		thirdToggler = $("#third_toggler");
+
+$(quote).on("click", ".quote_button", function(e) {
+	var target = e.target;
+	$(quoteButtons).each(function(i) {
+		quoteButtons[i].classList.remove("quote_button__active");
+	});
+	$(target).addClass("quote_button__active");
+
+	if (firstToggler.hasClass("quote_button__active")) {
+		$(quote).css("background-image", "url(../../img/quote_full.jpg)");
+	}
+	if (secondToggler.hasClass("quote_button__active")) {
+		$(quote).css("background-image", "url(../../img/quote_2.jpg)");
+	}
+	if (thirdToggler.hasClass("quote_button__active")) {
+		$(quote).css("background-image", "url(../../img/quote_3.jpg)");
+	}
+});
+
+
+
+
 //Button to the top of the page
 var upButton = document.createElement("div");  
 upButton.innerHTML = "Вверх";

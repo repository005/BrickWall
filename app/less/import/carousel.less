@@ -62,7 +62,11 @@
 	}
 	
 	&_prev {
-		left: 0;
+		left: 0px;
+
+		@media screen and @mobile {
+			left: 20px;
+		}
 
 		&::before {
 			background: url("../../img/arrow_left.svg") center center no-repeat;
@@ -72,6 +76,10 @@
 	
 	&_next {
 		right: 0;
+
+		@media screen and @mobile {
+			right: 20px;
+		}
 
 		&::before {
 			background: url("../../img/arrow_right.svg") center center no-repeat;
@@ -88,6 +96,14 @@
 
 		&::before {
 			background: #fff;
+		}
+
+		@media screen and @mobile {
+			text-align: center;
+
+			&::before {
+				background: none;
+			}
 		}
 	}
 

@@ -15,6 +15,9 @@
 		max-width: 100%;
 	}
 
+	@media screen and @mobile {
+		padding: 0 20px;
+	}
 
 	&_img {
 		width: 570px;
@@ -129,5 +132,19 @@
 		text-decoration: none;
 		position: relative;
 		.right-arrow;
+
+		@media screen and @mobile {
+			border-radius: 10px;
+			border: 2px solid #000;
+			text-align: center;
+			padding: 10px;
+			display: block;
+			width: 80px;
+			margin-bottom: 30px;
+
+			&::before {
+				display: none;
+			}
+		}
 	}
 }
