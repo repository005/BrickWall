@@ -593,23 +593,19 @@ h4 {
     display: inline-block;
   }
 }
-.header_down {
-  font-size: 24px;
-  text-transform: lowercase;
-  padding-left: 70px;
-  position: relative;
-  z-index: 1;
-}
-.header_down::before {
-  content: "↓";
-  font-weight: bold;
+.header_down-arrow {
+  margin-right: 10px;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
   font-size: 18px;
-  position: absolute;
-  display: block;
-  left: 21px;
-  top: 6px;
 }
-.header_down::after {
+@media screen and (max-width: 420px) {
+  .header_down-arrow {
+    padding-left: .5px;
+  }
+}
+.header_down-arrow::after {
   content: "";
   position: absolute;
   display: block;
@@ -619,7 +615,15 @@ h4 {
   height: 50px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 2px white solid;
+}
+.header_down {
+  font-size: 24px;
+  text-transform: lowercase;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .header_down {
@@ -919,10 +923,6 @@ h4 {
   .welcome_title {
     display: block;
     border-bottom: 2px solid black;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#aaaaaa));
-    background: -webkit-linear-gradient(top, white 0%, #aaaaaa);
-    background: -o-linear-gradient(top, white 0%, #aaaaaa);
-    background: linear-gradient(180deg, white 0%, #aaaaaa);
     padding: 20px 0;
     -webkit-border-radius: 0px 0px 10px 10px;
             border-radius: 0px 0px 10px 10px;
