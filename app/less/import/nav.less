@@ -12,9 +12,19 @@
 
 		@media screen and @mobile {
 			display: none;
+			opacity: 0;
 			position: absolute;
 			z-index: 2;
 			width: 100%;
+			transition: opacity 1s ease;
+			flex-wrap: wrap;
+		}
+
+		&__opened {
+			opacity: 1;
+			display: flex;
+			transition: opacity 1s ease;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -47,6 +57,7 @@
 
 		@media screen and @mobile {
 			margin: 0;
+			width: 100%;
 		}
 	}
 

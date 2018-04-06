@@ -18,13 +18,22 @@ $(".welcome_title").on("click", function() {
 });
 
 //mobile-navigation 
-var navStatus = false;
 
 $(".toggler").on("click", function() {
-	$(".nav_list").slideToggle(200);
-	navStatus = !navStatus;
-	$(".toggler_hamburger").toggleClass("toggler_hamburger__open");
-	$(".toggler_cross").toggleClass("toggler_cross__open");
+	if ($(window).width() < 420) {
+		$(".nav_list").toggleClass('nav_list__opened');
+		$(".toggler_hamburger").toggleClass("toggler_hamburger__open");
+		$(".toggler_cross").toggleClass("toggler_cross__open");
+	}
+});
+
+$(".nav_list").on('click', function(e) {
+	if ($(window).width() < 420) {
+		if (e.target.tagName != 'A') return;
+		$(".nav_list").removeClass('nav_list__opened');
+		$(".toggler_hamburger").toggleClass("toggler_hamburger__open");
+		$(".toggler_cross").toggleClass("toggler_cross__open");
+	}
 });
 
 //Like-button
@@ -103,9 +112,6 @@ $(quote).on("click", ".quote_button", function(e) {
 	}
 });
 
-
-
-
 //Button to the top of the page
 var upButton = document.createElement("div");  
 upButton.innerHTML = "Вверх";
@@ -155,5 +161,5 @@ function up() {
   return false;
  }
 
-$(upButton).on("click", up);
+	$(upButton).on("click", up);
 });
